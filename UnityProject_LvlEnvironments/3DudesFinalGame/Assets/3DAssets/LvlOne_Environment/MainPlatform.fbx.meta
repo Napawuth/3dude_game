@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: 696130825fb90274594a3fc166d90b15
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrushBristleMaterial
+    second: {fileID: 2100000, guid: 95ac1798f58b24440900c7c0bccd3f27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EaselMaterial
+    second: {fileID: 2100000, guid: 49f8bb9113082c342a7b3a3a5dc22f69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EraserMaterial
+    second: {fileID: 2100000, guid: da58e6abb2933784fbc4e5c5140552b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GradientTexture
+    second: {fileID: 2100000, guid: c98692035233e9b4db214622e91a22ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushThinHandleMaterial
+    second: {fileID: 2100000, guid: 8612411ae2f38f2429cbce9f9e79d0cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushWideHandleMaterial
+    second: {fileID: 2100000, guid: 63a350af267705644b40c51fbc572ca9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintPaletteMaterial
+    second: {fileID: 2100000, guid: d4c352128a855af40aa35d554dccbcd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintScalpelBladeMaterial
+    second: {fileID: 2100000, guid: 75566f3b6c3bd26448504eb203a2d1ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaintScalpelHandleMaterial
+    second: {fileID: 2100000, guid: 4100ec8f454331f4281ea83a5d98495d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PencilMaterial
+    second: {fileID: 2100000, guid: 63f72ee5ab7ae5341ac1f619a1bb4253, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BrushBaseTexture
+    second: {fileID: 2800000, guid: 484063c22d758ed428c677730ecff5c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Easel_standardSurface1_Height
+    second: {fileID: 2800000, guid: cfc82321658c0594abf7681774a91102, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Easel_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: 62956352e4e68414ca2bda5e65544553, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Easel_standardSurface1_Normal
+    second: {fileID: 2800000, guid: f8ec452a219ae3a4d9cc14089f82c5fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Easel_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: f3bb3590f9576ae4f9ef4b87fc19152b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eraser_standardSurface1_Height
+    second: {fileID: 2800000, guid: d3bc438a7078dee4aa41cd6e9df3a91f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eraser_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: 5f628ecbc2f618742b0cafc4f25c56d9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eraser_standardSurface1_Normal
+    second: {fileID: 2800000, guid: a0bde74335b37f34cbb1418c45e5fb54, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eraser_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: 557d5f4b7463c7f4290093f6f6889258, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushThinHandle_standardSurface1_Height
+    second: {fileID: 2800000, guid: 39647c6941bbea5499451ff872764516, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushThinHandle_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: 37a560c6e314a344caef02a2171b3951, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushThinHandle_standardSurface1_Normal
+    second: {fileID: 2800000, guid: 1375fc2ea31d88147b11f4073eeebaf9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushThinHandle_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: fa7c9028fdf1abb4b8d1bb4d42c20f87, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushWideHandle_standardSurface1_Height
+    second: {fileID: 2800000, guid: 91435e4171629b143b235dc264d305f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushWideHandle_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: 7710f8b6acc35a7489a15944b34ffe9d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushWideHandle_standardSurface1_Normal
+    second: {fileID: 2800000, guid: aac8469c7df58ff4e92b9a7e95096293, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintBrushWideHandle_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: 92eaf6bb4744b5147978987468824ff8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintPalette_standardSurface1_Height
+    second: {fileID: 2800000, guid: 493015610ec8ba64ab9094a19735782e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintPalette_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: 3e6f19dc67e88f446af26ca368631d9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintPalette_standardSurface1_Normal
+    second: {fileID: 2800000, guid: 55108cfecf8de4e46a80e07afddd33ab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintPalette_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: 8f822f0272413b94f8f6c21c14a3936f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintScalpelHandle_standardSurface1_Height
+    second: {fileID: 2800000, guid: b6a13c399df7997428159d356c7a8760, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintScalpelHandle_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: 343268170233b024998b5d73a0373230, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintScalpelHandle_standardSurface1_Normal
+    second: {fileID: 2800000, guid: 6c7ac7bfbb91ded4ebd162a7f58ce6ac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintScalpelHandle_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: 16472e6ac3660764fb8d289d83a59a91, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pencil_standardSurface1_Height
+    second: {fileID: 2800000, guid: b3681c533ff06e6408ebcd2cbf067c99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pencil_standardSurface1_Metallic
+    second: {fileID: 2800000, guid: c5adb1f23742e6144ac2b3e995766b61, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pencil_standardSurface1_Normal
+    second: {fileID: 2800000, guid: a21226646cdc26146ac21b1696c4e8dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pencil_standardSurface1_Roughness
+    second: {fileID: 2800000, guid: 69776f6c1a455b44ba03f49288164431, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: texture-palette
+    second: {fileID: 2800000, guid: 5fab8836ee70d0745902d412d6528e99, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
