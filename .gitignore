@@ -1,0 +1,64 @@
+# ========================================== #
+#       Official Unity .gitignore Template    #
+# ========================================== #
+
+# Never commit these folders. They contain local caches, temporary files, 
+# and user layouts unique to your machine. Unity recreates them automatically.
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+UserGenerated/
+UserSettings/
+
+# Core project tracking exclusions
+/[Aa]sset/[Mm]etafile
+/[Aa]sset/[Aa]sset[Ss]tore[Pp]ackages/
+
+# Automated builds and crash reports
+*.apk
+*.unitypackage
+*.bundle
+
+# ========================================== #
+#         IDE and Project Files             #
+# ========================================== #
+# Visual Studio, Rider, and VS Code local files
+ExportedObj/
+.consulo/
+.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# JetBrains Rider specific
+.idea/
+*.sln.iml
+
+# Visual Studio Code specific
+.vscode/
+
+# ========================================== #
+#             OS & System Files              #
+# ========================================== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
