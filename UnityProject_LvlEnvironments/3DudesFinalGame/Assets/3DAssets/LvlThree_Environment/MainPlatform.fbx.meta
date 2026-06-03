@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 7b52f4a13c488ad42a44150e6f77bea9
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book1_M
+    second: {fileID: 2100000, guid: c72e041ea84f9714ca6ff412553f5822, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book2_M
+    second: {fileID: 2100000, guid: cc2a15fba124301458e16fd5a3f352e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book3_M
+    second: {fileID: 2100000, guid: 4226f0f356500564d8f53562fa48a516, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book4_M
+    second: {fileID: 2100000, guid: 16ce1676c1831b543b3d3cfb3608af67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper_Med_M
+    second: {fileID: 2100000, guid: 6107e2b0e43b95b4ca77cf7c8212c95b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper_Thick1_M
+    second: {fileID: 2100000, guid: f939d370056859649959467075957498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper_Thick2_M
+    second: {fileID: 2100000, guid: 3b359e12ae26efa41916e52e1ff64ded, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper_Thin_M
+    second: {fileID: 2100000, guid: c47be6b1acbafb84692f6770fc7714d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper_Top_M
+    second: {fileID: 2100000, guid: c27c002833645894e8344d342bb6d1cf, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book1_M_Height
+    second: {fileID: 2800000, guid: 004ca7928c2966b44be7cd0636f610c8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book1_M_Metallic
+    second: {fileID: 2800000, guid: 5db8ef56860ead342b8da3299e49facf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book1_M_Normal
+    second: {fileID: 2800000, guid: a6a76415fc0d98040a8451f97180641e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book1_M_Roughness
+    second: {fileID: 2800000, guid: 2a35341ad88eeb4459927e315ae7833c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book2_M_Height
+    second: {fileID: 2800000, guid: 69574b3c40d4b4a4eb6e5118ffbad869, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book2_M_Metallic
+    second: {fileID: 2800000, guid: f915ed5104f99df4c9c1c8a33b929204, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book2_M_Normal
+    second: {fileID: 2800000, guid: 18d7c27eff2337f468b95a9e2ef349a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book2_M_Roughness
+    second: {fileID: 2800000, guid: ec904a5c3cdd53a48b4b6417b3894a52, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book3_M_Height
+    second: {fileID: 2800000, guid: 4c7f42ca725c02742840a17d7d498c22, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book3_M_Metallic
+    second: {fileID: 2800000, guid: 5e5cc18c1c372d047b7bd1c70335af90, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book3_M_Normal
+    second: {fileID: 2800000, guid: 26da3e15eaeab424fa15b478e0ec73e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book3_M_Roughness
+    second: {fileID: 2800000, guid: 11ece7cbe4dae3141a9f0d787023475e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book4_M_Height
+    second: {fileID: 2800000, guid: 59f6024dce8789e44b0d482231194842, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book4_M_Metallic
+    second: {fileID: 2800000, guid: a65d0dd17512bbf4dbd5a033abe89998, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book4_M_Normal
+    second: {fileID: 2800000, guid: 7677124632bfa564c89579e6de4adb18, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Books_Book4_M_Roughness
+    second: {fileID: 2800000, guid: c8da8003094596441a62463113d59697, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MainPlatform_Paper_Top_M_Height_Raw
+    second: {fileID: 2800000, guid: 498a0fee6bd48d843b4ed7556d66300a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MainPlatform_Paper_Top_M_Metallic_Raw
+    second: {fileID: 2800000, guid: 76b731683ef6ab14691c2a335e9f3111, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MainPlatform_Paper_Top_M_Normal_Raw
+    second: {fileID: 2800000, guid: 508c46c7f06e96c4aaf516a69318b78c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MainPlatform_Paper_Top_M_Roughness_Raw
+    second: {fileID: 2800000, guid: 24f55fcfd37bd4f4da7dbf731e87715c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperMed_Paper_Med_M_Height
+    second: {fileID: 2800000, guid: 9a037e0167e2ab642a0a9de671408a51, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperMed_Paper_Med_M_Metallic
+    second: {fileID: 2800000, guid: aa54b1aee3f65ec42aa718e73a36aaee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperMed_Paper_Med_M_Normal
+    second: {fileID: 2800000, guid: 68e6b30bb86dbbc4cabc57cf7eb03588, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperMed_Paper_Med_M_Roughness
+    second: {fileID: 2800000, guid: 8be06105b66a0bc4fb5ce09a575b5628, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick1_Paper_Thick1_M_Height
+    second: {fileID: 2800000, guid: 63c6c8b87e468ab42b9af826d996f075, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick1_Paper_Thick1_M_Metallic
+    second: {fileID: 2800000, guid: ca30e4bc18c10664f941419e9cb6e84d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick1_Paper_Thick1_M_Normal
+    second: {fileID: 2800000, guid: 5e389020d2567d64785333e57d795602, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick1_Paper_Thick1_M_Roughness
+    second: {fileID: 2800000, guid: a42a5837453794b46919eb28a6d03194, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick2_Paper_Thick2_M_Height
+    second: {fileID: 2800000, guid: 24158ba3fd601824faa945abd158f778, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick2_Paper_Thick2_M_Metallic
+    second: {fileID: 2800000, guid: 1f222916e0e560941b86e3b7fc120c6b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick2_Paper_Thick2_M_Normal
+    second: {fileID: 2800000, guid: 25408dbeb84e1e541aa9ad6c4363875a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThick2_Paper_Thick2_M_Roughness
+    second: {fileID: 2800000, guid: 1fbf536858f8dc7468610c947c9c67ba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThin_Paper_Thin_M_Height
+    second: {fileID: 2800000, guid: 6f1ec6b3440134147b4268afa56d0221, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThin_Paper_Thin_M_Metallic
+    second: {fileID: 2800000, guid: 40f9bbac9a0dcd0498a3af7dbfb270d1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThin_Paper_Thin_M_Normal
+    second: {fileID: 2800000, guid: 4bc18cdc243aeae4a80abc7e899158fb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaperThin_Paper_Thin_M_Roughness
+    second: {fileID: 2800000, guid: 984f6118018bf324a848698821a1eb03, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
