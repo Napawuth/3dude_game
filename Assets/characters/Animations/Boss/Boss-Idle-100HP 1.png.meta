@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 54f60f8bf362d7a4f9ff51927db709be
+guid: 75ad27e5927d17e4a9c42386ac98b2ad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Artist-attack-Sheet_0
+      name: Boss-100HP_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 310feeef5528e294bbee23b40dbd463d
-      internalID: 2083478877
+      spriteID: 13be3b67326469b4b9e1c45152d36e9c
+      internalID: -2142603876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Artist-attack-Sheet_1
+      name: Boss-100HP_1
       rect:
         serializedVersion: 2
         x: 64
@@ -147,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e7008a2bc5a3654a92997f89e501bc9
-      internalID: 463985905
+      spriteID: 299cf0c2588968742ae39608bbae5fec
+      internalID: -671450570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Artist-attack-Sheet_2
+      name: Boss-100HP_2
       rect:
         serializedVersion: 2
         x: 128
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2312bdff5285726418f89dfacc36bfe0
-      internalID: 1276874678
+      spriteID: 175c77337b80f074884b7a6dcf018cf6
+      internalID: -402704130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Artist-attack-Sheet_3
+      name: Boss-100HP_3
       rect:
         serializedVersion: 2
         x: 192
@@ -191,30 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58731dfce9015a942b4040081788dcd8
-      internalID: -83505124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Artist-attack-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 846ed53bbb36afa4f8d6bedf4a04ce10
-      internalID: -1483549124
+      spriteID: ed03221c1b1e5264d97cb069b4335322
+      internalID: 555691221
       vertices: []
       indices: 
       edges: []
@@ -223,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9d062fe2d04fd8f479736281550099b7
+    spriteID: 3f45e2dc698294f43b1453e034c733dd
     internalID: 0
     vertices: []
     indices: 
@@ -233,13 +211,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Artist-attack-Sheet_0: 2083478877
-      Artist-attack-Sheet_1: 463985905
-      Artist-attack-Sheet_2: 1276874678
-      Artist-attack-Sheet_3: -83505124
-      Artist-attack-Sheet_4: -1483549124
+      Boss-100HP_0: -2142603876
+      Boss-100HP_1: -671450570
+      Boss-100HP_2: -402704130
+      Boss-100HP_3: 555691221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
