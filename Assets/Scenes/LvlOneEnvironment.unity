@@ -79653,9 +79653,9 @@ GameObject:
   - component: {fileID: 1493936356}
   - component: {fileID: 1493936355}
   - component: {fileID: 1493936354}
-  m_Layer: 0
-  m_Name: Aritist
-  m_TagString: Untagged
+  m_Layer: 6
+  m_Name: Artist
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79776,6 +79776,10 @@ MonoBehaviour:
     m_Bits: 8
   groundCheckRadius: 0.2
   attackDuration: 0.3
+  attackCooldown: 1.5
+  formatAttackPrefab: {fileID: 0}
+  attackSpawnPoint: {fileID: 0}
+  statusBar: {fileID: 0}
 --- !u!136 &1493936355
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -82810,15 +82814,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a384b50b28d128458a7960d1d07dac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossController
-  minTimeBetweenAttacks: 1
-  maxTimeBetweenAttacks: 3
+  timeBetweenAttacks: 3
   attackDuration: 1
   rainDropPrefab: {fileID: 4380677241614236612, guid: e7daf97027fd14a4f87e14df1b11c9f2, type: 3}
   numberOfDrops: 15
   delayBetweenDrops: 0.15
   spawnHeight: 5
   horizontalSpread: 6
-  attackXOffset: 3
 --- !u!1001 &1833687469
 PrefabInstance:
   m_ObjectHideFlags: 0

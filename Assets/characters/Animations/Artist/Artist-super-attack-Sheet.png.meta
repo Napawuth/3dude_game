@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7f1be3ea47b60f47af99a970c60bff2
+guid: b78bedcdfa19392479c7805d68866619
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack-Big-Sheet_0
+      name: Artist-super-attack-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2697ba4f2f143ad4ea3b899e7f19a5ba
-      internalID: 806945017
+      spriteID: 063784fce29e0664bb2584683c437185
+      internalID: -1699776470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-Big-Sheet_1
+      name: Artist-super-attack-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -147,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8b987e8587a5034cbbc40decb7063c7
-      internalID: -1945988729
+      spriteID: f7a042e3b1e69a64394fd28320fe4f4b
+      internalID: -775617763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-Big-Sheet_2
+      name: Artist-super-attack-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aae60ccc820bc64f945549a2950f263
-      internalID: -569019469
+      spriteID: 54771f650f5fbaf41b37334561c29b59
+      internalID: 1495669130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-Big-Sheet_3
+      name: Artist-super-attack-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
@@ -191,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be5032f18d1f9de4d9c42f1fd2aec138
-      internalID: -1502970253
+      spriteID: 3d649cfcaa11c0d40b7e3e2438488453
+      internalID: -437603530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-Big-Sheet_4
+      name: Artist-super-attack-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
@@ -213,8 +213,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c841357c94fc6344aa6b693fba59199f
-      internalID: 1554499604
+      spriteID: 42b46dd1cb500cf40946bac2654fcd79
+      internalID: -1127285074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artist-super-attack-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b0646739d2949468a7d86f13091f11
+      internalID: -524436854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artist-super-attack-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51149036bfb5a0e4c8e7a899664360bd
+      internalID: -1475057296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artist-super-attack-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941a380daf684f5488f3ff2f3d220df7
+      internalID: -673331364
       vertices: []
       indices: 
       edges: []
@@ -223,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b869cca38f841cd4bb7dd21434c46819
+    spriteID: be180b3e4fb91404f9fda63be90c8c9f
     internalID: 0
     vertices: []
     indices: 
@@ -233,13 +299,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Attack-Big-Sheet_0: 806945017
-      Attack-Big-Sheet_1: -1945988729
-      Attack-Big-Sheet_2: -569019469
-      Attack-Big-Sheet_3: -1502970253
-      Attack-Big-Sheet_4: 1554499604
+      Artist-super-attack-Sheet_0: -1699776470
+      Artist-super-attack-Sheet_1: -775617763
+      Artist-super-attack-Sheet_2: 1495669130
+      Artist-super-attack-Sheet_3: -437603530
+      Artist-super-attack-Sheet_4: -1127285074
+      Artist-super-attack-Sheet_5: -524436854
+      Artist-super-attack-Sheet_6: -1475057296
+      Artist-super-attack-Sheet_7: -673331364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
