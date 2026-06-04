@@ -18,12 +18,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack Settings")]
     public float attackDuration = 0.3f;
-    public float attackCooldown = 1.5f;
-    public GameObject formatAttackPrefab;
+    public GameObject cropAttackPrefab;
     public Transform attackSpawnPoint;
-
-    [Header("UI")]
-    [SerializeField] private PlayerStatusBar statusBar;
 
     private Rigidbody rb;
     private SpriteRenderer spriteRenderer;
@@ -32,7 +28,6 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool jumpRequested;
     private bool isAttacking;
-    private bool isCoolingDown;
 
     void Start()
     {
@@ -54,14 +49,20 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current != null)
         {
             if (Keyboard.current.leftArrowKey.isPressed)
+            {
                 horizontalInput = 1f;
+                Debug.Log("Left arrow pressed");
+            }
             else if (Keyboard.current.rightArrowKey.isPressed)
+            {
                 horizontalInput = -1f;
+                Debug.Log("Right arrow pressed");
+            }
 
-            if (Keyboard.current.upArrowKey.wasPressedThisFrame && isGrounded)
-                jumpRequested = true;
+            if (Keyboard.current.aKey.isPressed)
+                Debug.Log("A key still being read!");
 
-            if (Keyboard.current.slashKey.wasPressedThisFrame && isGrounded && !isAttacking && !isCoolingDown)
+            if (Keyboard.current.slashKey.wasPressedThisFrame && isGrounded && !isAttacking)
                 StartCoroutine(PerformAttack());
         }
 
@@ -78,29 +79,22 @@ public class PlayerController : MonoBehaviour
     IEnumerator PerformAttack()
     {
         isAttacking = true;
-        isCoolingDown = true;
         animator.SetBool("isWalking", false);
         animator.SetBool("isAttacking", true);
 
-        if (formatAttackPrefab != null && attackSpawnPoint != null)
-        {
-            GameObject projectile = Instantiate(formatAttackPrefab, attackSpawnPoint.position, Quaternion.identity);
-            FormatProjectile fp = projectile.GetComponent<FormatProjectile>();
-            if (fp != null)
-            {
-                // spriteRenderer.flipX = true means facing left which = -1, otherwise = 1
-                int direction = spriteRenderer.flipX ? 1 : -1;
-                fp.SetDirection(direction);
-            }
-        }
-        statusBar.TriggerAttackCooldown(attackCooldown);
+        if (cropAttackPrefab != null && attackSpawnPoint != null)
+            Instantiate(cropAttackPrefab, attackSpawnPoint.position, Quaternion.identity);
+
+        #if UNITY_2022_1_OR_NEWER
+            rb.linearVelocity = new Vector3(0f, rb.linearVelocity.y, 0f);
+        #else
+            rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
+        #endif
 
         yield return new WaitForSeconds(attackDuration);
-        animator.SetBool("isAttacking", false);
-        isAttacking = false;
 
-        yield return new WaitForSeconds(attackCooldown - attackDuration);
-        isCoolingDown = false;
+        isAttacking = false;
+        animator.SetBool("isAttacking", false);
     }
 
     void FixedUpdate()

@@ -175,7 +175,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Boss-100HP_0
+  m_Name: Boss-75HP_0
   serializedVersion: 6
   m_AnimatorParameters:
   - m_Name: isAttack

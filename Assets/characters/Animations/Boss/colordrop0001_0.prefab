@@ -154,3 +154,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02eabcb5265e2d34d9587d8f64b4c952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RainDrop
+  damage: 18

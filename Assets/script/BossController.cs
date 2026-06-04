@@ -4,27 +4,28 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     private Animator anim;
+    private Transform playerTransform;
 
     [Header("Attack Timing Settings")]
-    [SerializeField] private float minTimeBetweenAttacks = 3f; 
-    [SerializeField] private float maxTimeBetweenAttacks = 6f; 
+    [SerializeField] private float timeBetweenAttacks = 15.0f; 
     [SerializeField] private float attackDuration = 1.5f;       
 
     [Header("Rain Attack Settings")]
     [SerializeField] private GameObject rainDropPrefab; 
     [SerializeField] private int numberOfDrops = 5;      
     [SerializeField] private float delayBetweenDrops = 0.2f; 
-
-    [Header("2D Spawn Position Setup")]
     [SerializeField] private float spawnHeight = 5f;     
     [SerializeField] private float horizontalSpread = 4f;  
     
-    [Tooltip("Pushes the rain zone forward. Use a negative number if the boss is facing left!")]
-    [SerializeField] private float attackXOffset = -3f; // Adjust this to push it in front of the boss
-
     void Start()
     {
         anim = GetComponent<Animator>();
+
+        GameObject player = GameObject.Find("Artist");
+        if (player != null)
+            playerTransform = player.transform;
+        else
+            Debug.LogError("Could not find Artist GameObject in scene!");
 
         if (anim == null)
         {
@@ -39,8 +40,7 @@ public class BossController : MonoBehaviour
     {
         while (true)
         {
-            float randomCooldown = Random.Range(minTimeBetweenAttacks, maxTimeBetweenAttacks);
-            yield return new WaitForSeconds(randomCooldown);
+            yield return new WaitForSeconds(timeBetweenAttacks);
 
             anim.SetBool("isAttack", true);
 
@@ -56,21 +56,17 @@ public class BossController : MonoBehaviour
     {
         for (int i = 0; i < numberOfDrops; i++)
         {
-            if (rainDropPrefab != null)
+            if (rainDropPrefab != null && playerTransform != null)
             {
                 float randomX = Random.Range(-horizontalSpread, horizontalSpread);
-                
-                // Calculate the center point of the attack by adding the horizontal offset
-                float spawnCenterX = transform.position.x + attackXOffset;
 
-                Vector3 finalSpawnPosition = new Vector3(
-                    spawnCenterX + randomX, 
-                    transform.position.y + spawnHeight, 
+                Vector3 spawnPosition = new Vector3(
+                    playerTransform.position.x + randomX, 
+                    playerTransform.position.y + spawnHeight, 
                     transform.position.z
                 );
 
-                GameObject newDrop = Instantiate(rainDropPrefab, finalSpawnPosition, Quaternion.identity);
-                
+                GameObject newDrop = Instantiate(rainDropPrefab, spawnPosition, Quaternion.identity);
                 Destroy(newDrop, 3f);
             }
 
