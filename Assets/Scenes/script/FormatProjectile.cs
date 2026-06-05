@@ -31,6 +31,7 @@ public class FormatProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Projectile hit: " + other.gameObject.name + " tag: " + other.gameObject.tag);
         if (other.CompareTag("Boss"))
         {
             EnemyHealth bossHealth = other.GetComponent<EnemyHealth>();

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class BossStatusBar : MonoBehaviour
 {
     [SerializeField] private RectTransform bossHealthFill;
-    private float maxHealthWidth = 455f;
+    private float maxHealthWidth = 660f;
 
     public void UpdateHealth(float currentHP, float maxHP)
     {
