@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
     [Header("UI")]
     [SerializeField] private PlayerStatusBar statusBar;
 
+    // --- ADDED FOR AUDIO TEAMWORK ---
+    [Header("Audio Settings")]
+    [SerializeField] private PlayerAudioController audioController; 
+    // ---------------------------------
+
     private Rigidbody rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -40,6 +45,14 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+
+        // --- ADDED FOR AUDIO TEAMWORK ---
+        // Automatically attempts to find the sound controller if forgot to assign in inspector
+        if (audioController == null)
+        {
+            audioController = GetComponent<PlayerAudioController>();
+        }
+        // ---------------------------------
     }
 
     void Update()
@@ -59,7 +72,10 @@ public class PlayerController : MonoBehaviour
                 horizontalInput = -1f;
 
             if (Keyboard.current.upArrowKey.wasPressedThisFrame && isGrounded)
+            {
                 jumpRequested = true;
+                if (audioController != null) audioController.PlayJumpSound();
+            }
 
             if (Keyboard.current.slashKey.wasPressedThisFrame && isGrounded && !isAttacking && !isCoolingDown)
                 StartCoroutine(PerformAttack());
@@ -82,13 +98,16 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isWalking", false);
         animator.SetBool("isAttacking", true);
 
+   
+        if (audioController != null) audioController.PlayAttackSound();
+
+
         if (formatAttackPrefab != null && attackSpawnPoint != null)
         {
             GameObject projectile = Instantiate(formatAttackPrefab, attackSpawnPoint.position, Quaternion.identity);
             FormatProjectile fp = projectile.GetComponent<FormatProjectile>();
             if (fp != null)
             {
-                // spriteRenderer.flipX = true means facing left which = -1, otherwise = 1
                 int direction = spriteRenderer.flipX ? 1 : -1;
                 fp.SetDirection(direction);
             }
