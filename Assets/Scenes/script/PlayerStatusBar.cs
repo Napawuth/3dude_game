@@ -1,26 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class PlayerStatusBar : MonoBehaviour
 {
     [Header("Health Bar")]
     [SerializeField] private RectTransform healthFill;
-    private float maxHealthWidth = 325f;
+    private float maxHealthWidth = 395f;
 
     [Header("Attack Cooldown Bar")]
     [SerializeField] private RectTransform attackCooldownFill;
-    private float maxAttackWidth = 145f;
+    private float maxAttackWidth = 170f;
 
     [Header("Super Icon")]
     [SerializeField] private Image superIcon;
     [SerializeField] private Sprite superReady;
     [SerializeField] private Sprite superCooldown;
+    [SerializeField] private TextMeshProUGUI superCooldownText;
 
     [Header("Utility Icon")]
     [SerializeField] private Image utilityIcon;
     [SerializeField] private Sprite utilityReady;
     [SerializeField] private Sprite utilityCooldown;
+    [SerializeField] private TextMeshProUGUI utilityCooldownText;
+
+    void Start()
+    {
+        attackCooldownFill.localScale = new Vector3(1f, 1f, 1f);
+    }
 
     // Called by BossHealth script when boss takes damage
     public void UpdateHealth(float currentHP, float maxHP)
@@ -33,17 +41,7 @@ public class PlayerStatusBar : MonoBehaviour
     public void UpdateAttackCooldown(float cooldownRemaing, float cooldownTotal)
     {
         float fillAmount = 1f - (cooldownRemaing / cooldownTotal);
-        attackCooldownFill.sizeDelta = new Vector2(maxAttackWidth * fillAmount, attackCooldownFill.sizeDelta.y);
-    }
-
-    public void SetSuperReady(bool isReady)
-    {
-        superIcon.sprite = isReady ? superReady : superCooldown;
-    }
-
-    public void SetUtilityReady(bool isReady)
-    {
-        utilityIcon.sprite = isReady ? utilityReady : utilityCooldown;
+        attackCooldownFill.localScale = new Vector3(fillAmount, 1f, 1f);
     }
 
     public void TriggerAttackCooldown(float cooldownTime)
@@ -65,5 +63,63 @@ public class PlayerStatusBar : MonoBehaviour
         }
 
         attackCooldownFill.localScale = new Vector3(1f, 1f, 1f);
+    }
+
+    public void SetSuperReady(bool isReady)
+    {
+        superIcon.sprite = isReady ? superReady : superCooldown;
+        if (isReady)
+            superCooldownText.text = "";
+    }
+
+    public void SetUtilityReady(bool isReady)
+    {
+        utilityIcon.sprite = isReady ? utilityReady : utilityCooldown;
+        if (isReady)
+            utilityCooldownText.text = "";
+    }
+
+    public void TriggerSuper(float cooldownTime)
+    {
+        StartCoroutine(SuperCooldownRoutine(cooldownTime));
+    }
+
+    public void TriggerUtility(float cooldownTime)
+    {
+        StartCoroutine(UtilityCooldownRoutine(cooldownTime));
+    }
+
+    private IEnumerator SuperCooldownRoutine(float cooldownTime)
+    {
+        SetSuperReady(false);
+        float remaining = cooldownTime;
+
+        while (remaining > 0)
+        {
+            remaining -= Time.deltaTime;
+            superCooldownText.text = Mathf.CeilToInt(remaining).ToString(); // CeilToInt used to keep numbers whole
+            yield return null;
+        }
+
+        superCooldownText.text = "";
+        SetSuperReady(true);
+    }
+
+    private IEnumerator UtilityCooldownRoutine(float cooldownTime)
+    {
+        Debug.Log("Utility cooldown started");
+        SetUtilityReady(false);
+        float remaining = cooldownTime;
+
+        while (remaining > 0)
+        {
+            remaining -= Time.deltaTime;
+            utilityCooldownText.text = Mathf.CeilToInt(remaining).ToString();
+            yield return null;
+        }
+
+        Debug.Log("Utility cooldown finished");
+        utilityCooldownText.text = "";
+        SetUtilityReady(true);
     }
 }

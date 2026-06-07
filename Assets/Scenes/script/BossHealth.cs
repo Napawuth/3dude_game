@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,6 +18,8 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private BossStatusBar bossStatusBar;
+
+    [SerializeField] private GameManager gameManager;
     private Animator anim;
 
     private float currentHP;
@@ -42,13 +45,21 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        BossController bossController = GetComponent<BossController>();
+        if (bossController != null && bossController.IsImmune)
+        {
+            Debug.Log("Boss is immune!");
+            return;
+        }
+
         currentHP -= amount;
         currentHP = Mathf.Max(currentHP, 0f);
         bossStatusBar.UpdateHealth(currentHP, maxHP);
+        StartCoroutine(FlashRed());
         Debug.Log("Boss took " + amount + " damage. HP remaining: " + currentHP);
 
         if (currentHP <= 0)
-            Debug.Log("Design Complete");
+            StartCoroutine(BossDeathSequence());
 
         CheckPhaseTransition();
     }
@@ -82,5 +93,36 @@ public class EnemyHealth : MonoBehaviour
             return;
         }
         transform.position = target.position;
+    }
+
+    private IEnumerator FlashRed()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.color = Color.red;
+        yield return new WaitForSeconds(0.15f);
+        sr.color = Color.white;
+    }
+
+    private IEnumerator BossDeathSequence()
+    {
+        // Stop all boss attacks
+        BossController bossController = GetComponent<BossController>();
+        if (bossController != null)
+            bossController.StopAllCoroutines();
+
+        // Flicker 5 times over 2s
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        float flickerInterval = 2f / 10f;
+        for (int i = 0; i < 10; i++)
+        {
+            sr.enabled = !sr.enabled;
+            yield return new WaitForSeconds(flickerInterval);
+        }
+
+        sr.enabled = false;
+
+        // Wait half sec then show vic screen
+        yield return new WaitForSeconds(0.5f);
+        gameManager.ShowVictory();
     }
 }

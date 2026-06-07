@@ -27,8 +27,25 @@ public class PlayerController : MonoBehaviour
 
     // --- ADDED FOR AUDIO TEAMWORK ---
     [Header("Audio Settings")]
-    [SerializeField] private PlayerAudioController audioController; 
+    [SerializeField] private PlayerAudioController audioController;
     // ---------------------------------
+
+    [Header("Ability Settings")]
+    public float utilityCooldown = 12f;
+    public float superCooldown = 30f;
+    public GameObject superProjectilePrefab;
+    public Transform superSpawnPoint;
+
+    [Header("Respawn Settings")]
+    public Transform respawnPoint;
+    public float fallThreshold = -20f;
+
+    private bool isUtilityReady = false;
+    private bool isSuperReady = false;
+    private bool isOnUtilityCooldown = false;
+    private bool isOnSuperCooldown = false;
+
+    private PlayerHealth playerHealth;
 
     private Rigidbody rb;
     private SpriteRenderer spriteRenderer;
@@ -53,6 +70,9 @@ public class PlayerController : MonoBehaviour
             audioController = GetComponent<PlayerAudioController>();
         }
         // ---------------------------------
+
+        playerHealth = GetComponent<PlayerHealth>();
+        StartCoroutine(InitialCooldowns());
     }
 
     void Update()
@@ -77,8 +97,17 @@ public class PlayerController : MonoBehaviour
                 if (audioController != null) audioController.PlayJumpSound();
             }
 
-            if (Keyboard.current.slashKey.wasPressedThisFrame && isGrounded && !isAttacking && !isCoolingDown)
+            if (Keyboard.current.slashKey.wasPressedThisFrame && isGrounded && !isAttacking && !isCoolingDown && !spriteRenderer.flipX)
                 StartCoroutine(PerformAttack());
+
+            if (Keyboard.current.periodKey.wasPressedThisFrame && isUtilityReady && !isOnUtilityCooldown)
+                StartCoroutine(PerformUtility());
+
+            if (Keyboard.current.commaKey.wasPressedThisFrame && isSuperReady && !isOnSuperCooldown && !spriteRenderer.flipX)
+                StartCoroutine(PerformSuper());
+
+            if (transform.position.y < fallThreshold)
+                Respawn();
         }
 
         if (horizontalInput < 0)
@@ -122,6 +151,53 @@ public class PlayerController : MonoBehaviour
         isCoolingDown = false;
     }
 
+    IEnumerator PerformUtility()
+    {
+        isUtilityReady = false;
+        isOnUtilityCooldown = true;
+
+        playerHealth.ActivateShield();
+        statusBar.TriggerUtility(utilityCooldown);
+
+        yield return new WaitForSeconds(utilityCooldown);
+
+        isOnUtilityCooldown = false;
+        isUtilityReady = true;
+    }
+
+    IEnumerator PerformSuper()
+    {
+        isSuperReady = false;
+        isOnSuperCooldown = true;
+        isAttacking = true;
+
+        animator.SetBool("isAttacking", true);
+
+        if (superProjectilePrefab != null && superSpawnPoint != null)
+        {
+            GameObject projectile = Instantiate(superProjectilePrefab, superSpawnPoint.position, Quaternion.identity);
+            FormatProjectile fp = projectile.GetComponent<FormatProjectile>();
+            Debug.Log("FormatProjectile found: " + (fp != null));
+            if (fp != null)
+            {
+                fp.damage = 180f;
+                int direction = spriteRenderer.flipX ? 1 : -1;
+                fp.SetDirection(direction);
+                Debug.Log("Super direction set to: " + direction);
+            }
+        }
+
+        statusBar.TriggerSuper(superCooldown);
+
+        yield return new WaitForSeconds(attackDuration);
+        animator.SetBool("isAttacking", false);
+        isAttacking = false;
+
+        yield return new WaitForSeconds(superCooldown - attackDuration);
+        isOnSuperCooldown = false;
+        isSuperReady = true;
+    }
+
     void FixedUpdate()
     {
         if (isAttacking) return;
@@ -129,19 +205,19 @@ public class PlayerController : MonoBehaviour
         Vector3 checkPosition = groundCheck != null ? groundCheck.position : transform.position - new Vector3(0, 1f, 0);
         isGrounded = Physics.OverlapSphere(checkPosition, groundCheckRadius, groundLayer).Length > 0;
 
-        #if UNITY_2022_1_OR_NEWER
+#if UNITY_2022_1_OR_NEWER
             rb.linearVelocity = new Vector3(horizontalInput * moveSpeed, rb.linearVelocity.y, 0f);
-        #else
-            rb.velocity = new Vector3(horizontalInput * moveSpeed, rb.velocity.y, 0f);
-        #endif
+#else
+        rb.velocity = new Vector3(horizontalInput * moveSpeed, rb.velocity.y, 0f);
+#endif
 
         if (jumpRequested)
         {
-            #if UNITY_2022_1_OR_NEWER
+#if UNITY_2022_1_OR_NEWER
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, 0f);
-            #else
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0f);
-            #endif
+#else
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0f);
+#endif
             jumpRequested = false;
         }
     }
@@ -151,5 +227,24 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Vector3 checkPosition = groundCheck != null ? groundCheck.position : transform.position - new Vector3(0, 1f, 0);
         Gizmos.DrawWireSphere(checkPosition, groundCheckRadius);
+    }
+
+    private void Respawn()
+    {
+        rb.linearVelocity = Vector3.zero;
+        transform.position = respawnPoint.position;
+    }
+
+    private IEnumerator InitialCooldowns()
+    {
+        // Both start no ready, count down from full cooldown
+        statusBar.TriggerUtility(utilityCooldown);
+        statusBar.TriggerSuper(superCooldown);
+
+        yield return new WaitForSeconds(utilityCooldown);
+        isUtilityReady = true;
+
+        yield return new WaitForSeconds(superCooldown - utilityCooldown);
+        isSuperReady = true;
     }
 }
